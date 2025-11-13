@@ -1,0 +1,33 @@
+$hero-image__logo-font-size: 80px;
+$hero-image__content-font-size: 25px;
+$hero-image__info-color: white;
+
+.hero-image {
+  width: 100%;
+  padding-top: 120px;
+
+  .hero-image__inner {
+    background-image: url("/Quest/bg_main.png");
+    height: 590px;
+    position: relative;
+
+    .hero-image__info {
+      width: 800px;
+      height: 300px;
+      color: $hero-image__info-color;
+      position: absolute;
+      left: 50%;
+      top: 150px;
+      transform: translate(-50%, 0);
+
+      .hero-image__logo {
+        font-size: $hero-image__logo-font-size;
+        font-size: 900;
+      }
+
+      .hero-image__content {
+        font-size: $hero-image__content-font-size;
+      }
+    }
+  }
+}

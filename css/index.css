@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   list-style: none;
+  font-family: "verdana", Courier, monospace;
 }
 
 a {
@@ -11,8 +12,8 @@ a {
 
 header {
   width: 100%;
-  position: fixed;
   border-bottom: 1px solid black;
+  position: fixed;
 }
 header .header_inner {
   width: 1180px;
@@ -29,11 +30,11 @@ header .header_inner .header__logo {
   font-weight: 900;
 }
 header .header_inner .header__utility-menu {
+  display: flex;
+  gap: 20px;
   position: absolute;
   top: 10px;
   right: 20px;
-  display: flex;
-  gap: 20px;
 }
 header .header_inner .header__utility-menu .header__utility-item {
   padding: 5px 20px;
@@ -53,4 +54,30 @@ header .header_inner .header__menu .header__menu-item {
 }
 header .header_inner .header__menu .header__menu-item:hover {
   color: black;
+}
+
+.hero-image {
+  width: 100%;
+  padding-top: 120px;
+}
+.hero-image .hero-image__inner {
+  background-image: url("/Quest/bg_main.png");
+  height: 590px;
+  position: relative;
+}
+.hero-image .hero-image__inner .hero-image__info {
+  width: 800px;
+  height: 300px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  transform: translate(-50%, 0);
+}
+.hero-image .hero-image__inner .hero-image__info .hero-image__logo {
+  font-size: 80px;
+  font-size: 900;
+}
+.hero-image .hero-image__inner .hero-image__info .hero-image__content {
+  font-size: 25px;
 }/*# sourceMappingURL=index.css.map */
