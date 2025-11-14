@@ -1,4 +1,4 @@
-$hero-image__logo-font-size: 80px;
+$hero-image__title-font-size: 80px;
 $hero-image__content-font-size: 25px;
 $hero-image__info-color: white;
 
@@ -20,8 +20,8 @@ $hero-image__info-color: white;
       top: 150px;
       transform: translate(-50%, 0);
 
-      .hero-image__logo {
-        font-size: $hero-image__logo-font-size;
+      .hero-image__title {
+        font-size: $hero-image__title-font-size;
         font-size: 900;
       }
 
