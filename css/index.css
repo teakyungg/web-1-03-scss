@@ -108,4 +108,43 @@ header .header_inner .header__menu .header__menu-item:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+  padding-bottom: 100px;
+}
+footer .footer__inner {
+  width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  color: gray;
+}
+footer .footer__inner .footer__title {
+  position: absolute;
+  font-size: 40px;
+  left: 10px;
+  bottom: 15px;
+}
+footer .footer__inner .footer__info {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+footer .footer__inner .footer__info .footer__info-list {
+  display: flex;
+}
+footer .footer__inner .footer__info .footer__info-list *::after {
+  content: "|";
+  padding: 0 10px;
+}
+footer .footer__inner .footer__info .footer__info-list *:last-child::after {
+  content: "";
+  padding: 0;
+}
+footer .footer__inner .footer__contact {
+  position: absolute;
+  top: 100px;
 }/*# sourceMappingURL=index.css.map */
