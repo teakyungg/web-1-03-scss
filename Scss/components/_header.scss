@@ -3,6 +3,8 @@ $header__menu-item-padding: 5px 20px;
 header {
   width: 100%;
   position: fixed;
+  z-index: 999;
+  background-color: white;
   border-bottom: 1px solid black;
 
   .header_inner {
@@ -44,6 +46,10 @@ header {
         padding: $header__menu-item-padding;
         color: rgb(160, 160, 160);
         font-weight: 900;
+
+        &:hover {
+          color: black;
+        }
       }
     }
   }
