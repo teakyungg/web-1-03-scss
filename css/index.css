@@ -13,6 +13,8 @@ a {
 header {
   width: 100%;
   position: fixed;
+  z-index: 999;
+  background-color: white;
   border-bottom: 1px solid black;
 }
 header .header_inner {
@@ -52,6 +54,9 @@ header .header_inner .header__menu .header__menu-item {
   color: rgb(160, 160, 160);
   font-weight: 900;
 }
+header .header_inner .header__menu .header__menu-item:hover {
+  color: black;
+}
 
 .hero-image {
   width: 100%;
@@ -71,10 +76,36 @@ header .header_inner .header__menu .header__menu-item {
   top: 150px;
   transform: translate(-50%, 0);
 }
-.hero-image .hero-image__inner .hero-image__info .hero-image__logo {
+.hero-image .hero-image__inner .hero-image__info .hero-image__title {
   font-size: 80px;
   font-size: 900;
 }
 .hero-image .hero-image__inner .hero-image__info .hero-image__content {
   font-size: 25px;
+}
+
+.recent-news {
+  width: 100%;
+}
+.recent-news .recent-news__inner {
+  width: 1180px;
+  height: 450px;
+  margin: 0 auto;
+}
+.recent-news .recent-news__inner .recent-news__title {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recent-news .recent-news__inner .recent-news__list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.recent-news .recent-news__inner .recent-news__list .recent-news__item {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }/*# sourceMappingURL=index.css.map */

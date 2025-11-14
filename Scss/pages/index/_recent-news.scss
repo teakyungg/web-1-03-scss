@@ -1,0 +1,29 @@
+.recent-news {
+  width: 100%;
+
+  .recent-news__inner {
+    width: 1180px;
+    height: 450px;
+    margin: 0 auto;
+
+    .recent-news__title {
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .recent-news__list {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+
+      .recent-news__item {
+        width: 230px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}
