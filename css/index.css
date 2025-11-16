@@ -102,7 +102,7 @@ footer .footer__inner .footer__contact {
   padding-top: 120px;
 }
 .hero-image .hero-image__inner {
-  background-image: url("../../../Quest/bg_main.png");
+  background-image: url(../../../Quest/bg_main.png);
   height: 590px;
   position: relative;
 }
