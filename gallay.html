@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="scss 연습페이지" />
+    <script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <link rel="stylesheet" href="./css/gallay.css" />
+    <title>gallay</title>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.querySelector(".grid");
+
+        /* 모든 이미지가 로드될때 까지 대기 후 실행 */
+        imagesLoaded(grid, () => {
+          /* 라이브러리 옵션 */
+          new Packery(grid, {
+            itemSelector: ".grid-item",
+            gutter: 10,
+            fitWidth: true,
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header_inner">
+        <ul class="header__utility-menu">
+          <li><a href="/" class="header__utility-item">Contact</a></li>
+          <li><a href="/" class="header__utility-item">Help</a></li>
+          <li><a href="/" class="header__utility-item">Login</a></li>
+          <li><a href="/" class="header__utility-item">Join</a></li>
+          <li><a href="/" class="header__utility-item">Sitemap</a></li>
+        </ul>
+
+        <a href="#" class="header__logo">WON LAB</a>
+
+        <ul class="header__menu">
+          <li><a href="/" class="header__menu-item">DEPARTMENT</a></li>
+          <li><a href="/gallay.html" class="header__menu-item">GALLERY</a></li>
+          <li><a href="/" class="header__menu-item">YOUTUBE</a></li>
+          <li><a href="/" class="header__menu-item">COMMUNITY</a></li>
+          <li><a href="/" class="header__menu-item">LOCATION</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 갤러리 -->
+    <section class="gally-list">
+      <h1 class="sr-only">gally</h1>
+
+      <div class="grid">
+        <figure class="grid-item gally-item">
+          <img src="./Quest/700x400.png" alt="Merry Christmas img" />
+          <figcaption class="gally-item__description merry-christmas">Merry Christmas</figcaption>
+        </figure>
+
+        <figure class="grid-item gally-item">
+          <img src="./Quest/290x190.png" alt="Frozen img" />
+          <figcaption class="gally-item__description frozen">Frozen</figcaption>
+        </figure>
+
+        <figure class="grid-item gally-item">
+          <img src="./Quest/290x95-1.png" alt="Present img" />
+          <figcaption class="gally-item__description present">Present</figcaption>
+        </figure>
+
+        <figure class="grid-item gally-item">
+          <img src="./Quest/290x95-2.png" alt="Gook Luck img" />
+        </figure>
+
+        <figure class="grid-item gally-item">
+          <img src="./Quest/490x240-1.png" alt="Programmer img" />
+        </figure>
+
+        <figure class="grid-item gally-item">
+          <img src="./Quest/500x490.png" alt="Happy New Year img" />
+        </figure>
+
+        <figure class="grid-item gally-item">
+          <img src="./Quest/490x240-2.png" alt="Be Rich img" />
+          <figcaption class="gally-item__description be-rich">Be RICH!!</figcaption>
+        </figure>
+
+        <figure class="grid-item gally-item">
+          <img src="./Quest/1000x371.png" alt="Life is entirely Y.O.U.R.S img" />
+          <figcaption class="gally-item__description life">Life is entirely Y.O.U.R.S</figcaption>
+        </figure>
+
+        <figure class="grid-item gally-item">
+          <img src="./Quest/1000x361.png" alt="Programmer is the perfect future img" />
+          <figcaption class="gally-item__description digital-nomad">
+            <p><span class="digital-nomad__text-strong">Programmer</span> is the perfect future.</p>
+            <p>Let's be <span class="digital-nomad__text-strong">the Digital Nomad!</span></p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </body>
+</html>
