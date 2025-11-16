@@ -1,0 +1,77 @@
+@mixin gally-item__description($top: auto, $right: auto, $bottom: auto, $left: auto, $color: black, $font-size: 16px) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  color: $color;
+  font-size: $font-size;
+}
+
+.gally-list {
+  width: 100%;
+  padding-top: 130px;
+  padding-bottom: 50px;
+
+  .grid {
+    width: 1000px;
+    margin: 0 auto;
+
+    .grid-item img {
+      display: block;
+    }
+  }
+
+  .gally-item {
+    position: relative;
+
+    .gally-item__description {
+      position: absolute;
+      font-weight: 700;
+    }
+
+    // 갤러리 아이템들
+    .merry-christmas {
+      @include gally-item__description(auto, 10px, 10px, auto, white, 40px);
+    }
+
+    .frozen {
+      @include gally-item__description(40px, auto, auto, 10px, white, 25px);
+    }
+
+    .present {
+      @include gally-item__description(auto, 10px, 10px, auto, white, 25px);
+    }
+
+    .programmer {
+      @include gally-item__description(auto, 10px, 10px, auto, white, 25px);
+    }
+
+    .be-rich {
+      @include gally-item__description(auto, 10px, 15px, auto, rgb(204, 204, 0), 30px);
+    }
+
+    .life {
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 40px;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    .digital-nomad {
+      bottom: 60px;
+      right: 80px;
+      color: white;
+      font-size: 20px;
+      font-weight: normal;
+
+      .digital-nomad__text-strong {
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+  }
+}
