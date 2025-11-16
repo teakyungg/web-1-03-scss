@@ -1,5 +1,5 @@
-@forward "../../common/resetCss";
-@forward "../../components/header";
+@forward "../../common/resetCss"; // 공용
+@forward "../../components/header"; // 공용
+@forward "../../components/footer"; // 공용
 @forward "./hero-image";
 @forward "./recent-news";
-@forward "../../components/footer";
