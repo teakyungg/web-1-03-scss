@@ -10,3 +10,29 @@
     position: relative;
   }
 }
+
+@mixin absolute-pos($top: null, $right: null, $bottom: null, $left: null, $center: false) {
+  position: absolute;
+
+  @if $top != null {
+    top: $top;
+  }
+
+  @if $right != null {
+    right: $right;
+  }
+
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+
+  @if $left != null {
+    left: $left;
+  }
+
+  @if $center == true {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
