@@ -1,8 +1,11 @@
+@use "../utils/variables";
+
 * {
   padding: 0px;
   margin: 0px;
   list-style: none;
-  font-family: "verdana", Courier, monospace;
+  font-family: variables.$font-base;
+  color: variables.$font-baseColor;
 }
 
 a {

@@ -14,18 +14,20 @@ $hero-image__info-color: white;
     .hero-image__info {
       width: 800px;
       height: 300px;
-      color: $hero-image__info-color;
       position: absolute;
       left: 50%;
       top: 150px;
       transform: translate(-50%, 0);
+      color: $hero-image__info-color;
 
       .hero-image__title {
         font-size: $hero-image__title-font-size;
-        font-size: 900;
+        color: inherit;
+        font-weight: 700;
       }
 
       .hero-image__content {
+        color: inherit;
         font-size: $hero-image__content-font-size;
       }
     }
