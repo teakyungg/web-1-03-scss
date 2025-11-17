@@ -1,20 +1,19 @@
+@use "../utils/layout";
+
 footer {
   width: 100%;
   background-color: rgb(34, 34, 34);
   padding-bottom: 100px;
 
   .footer__inner {
-    width: 1000px;
-    height: 100px;
-    margin: 0 auto;
-    position: relative;
+    @include layout.inner-container(1000px, 100px);
     color: gray;
 
     .footer__title {
       position: absolute;
-      font-size: 40px;
       left: 10px;
       bottom: 15px;
+      font-size: 40px;
     }
 
     .footer__info {

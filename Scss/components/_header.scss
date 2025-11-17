@@ -1,3 +1,5 @@
+@use "../utils/layout";
+
 $header__menu-item-padding: 5px 20px;
 
 header {
@@ -8,10 +10,7 @@ header {
   border-bottom: 1px solid black;
 
   .header_inner {
-    width: 1180px;
-    height: 120px;
-    margin: 0 auto;
-    position: relative;
+    @include layout.inner-container(1180px, 120px);
 
     .header__logo {
       position: absolute;
