@@ -19,14 +19,14 @@ header {
 }
 header .header_inner {
   width: 1180px;
-  height: 120px;
   margin: 0 auto;
+  height: 120px;
   position: relative;
 }
 header .header_inner .header__logo {
   position: absolute;
-  left: 100px;
   bottom: 10px;
+  left: 100px;
   padding: 5px 20px;
   font-size: 30px;
   font-weight: 900;
@@ -65,16 +65,16 @@ footer {
 }
 footer .footer__inner {
   width: 1000px;
-  height: 100px;
   margin: 0 auto;
+  height: 100px;
   position: relative;
   color: gray;
 }
 footer .footer__inner .footer__title {
   position: absolute;
-  font-size: 40px;
-  left: 10px;
   bottom: 15px;
+  left: 10px;
+  font-size: 40px;
 }
 footer .footer__inner .footer__info {
   position: absolute;
@@ -109,17 +109,19 @@ footer .footer__inner .footer__contact {
 .hero-image .hero-image__inner .hero-image__info {
   width: 800px;
   height: 300px;
-  color: white;
   position: absolute;
-  left: 50%;
   top: 150px;
+  left: 50%;
   transform: translate(-50%, 0);
+  color: white;
 }
 .hero-image .hero-image__inner .hero-image__info .hero-image__title {
   font-size: 80px;
-  font-size: 900;
+  color: inherit;
+  font-weight: 700;
 }
 .hero-image .hero-image__inner .hero-image__info .hero-image__content {
+  color: inherit;
   font-size: 25px;
 }
 
@@ -128,8 +130,9 @@ footer .footer__inner .footer__contact {
 }
 .recent-news .recent-news__inner {
   width: 1180px;
-  height: 450px;
   margin: 0 auto;
+  height: 450px;
+  position: relative;
 }
 .recent-news .recent-news__inner .recent-news__title {
   height: 150px;

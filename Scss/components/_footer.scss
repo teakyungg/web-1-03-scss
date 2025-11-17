@@ -10,16 +10,13 @@ footer {
     color: gray;
 
     .footer__title {
-      position: absolute;
-      left: 10px;
-      bottom: 15px;
+      @include layout.absolute-pos($left: 10px, $bottom: 15px);
+
       font-size: 40px;
     }
 
     .footer__info {
-      position: absolute;
-      right: 20px;
-      bottom: 15px;
+      @include layout.absolute-pos($right: 20px, $bottom: 15px);
 
       .footer__info-list {
         display: flex;
@@ -37,8 +34,7 @@ footer {
     }
 
     .footer__contact {
-      position: absolute;
-      top: 100px;
+      @include layout.absolute-pos($top: 100px);
     }
   }
 }

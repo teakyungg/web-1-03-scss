@@ -1,3 +1,5 @@
+@use "../../utils/layout";
+
 $hero-image__title-font-size: 80px;
 $hero-image__content-font-size: 25px;
 $hero-image__info-color: white;
@@ -14,9 +16,7 @@ $hero-image__info-color: white;
     .hero-image__info {
       width: 800px;
       height: 300px;
-      position: absolute;
-      left: 50%;
-      top: 150px;
+      @include layout.absolute-pos($left: 50%, $top: 150px);
       transform: translate(-50%, 0);
       color: $hero-image__info-color;
 
