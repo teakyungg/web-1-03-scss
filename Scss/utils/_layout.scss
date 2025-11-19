@@ -11,6 +11,13 @@
   }
 }
 
+// 공통된 요소
+// 발견한 불편한 요소
+
+// 1. if문이 너무 쓸데 없이 많은거 같음
+// 2. 매개변수 입력시 보통, (top,(right,left)), (bottom,(right,bottom)) 이 2개의 방식으로만 현재 mixin은 모든 값 입력해야함
+// 3. 마지막에 center가 true일때 중앙요소가 덮어씌우는 형태는 보기 안좋은듯
+
 @mixin absolute-pos($top: null, $right: null, $bottom: null, $left: null, $center: false) {
   position: absolute;
 
