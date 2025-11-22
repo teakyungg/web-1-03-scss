@@ -1,0 +1,67 @@
+@use "sass:map";
+@use "../utils/variables";
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: map.get(variables.$header, z-index);
+
+  background-color: map.get(variables.$header, background-color);
+  border-bottom: map.get(variables.$header, border-bottom);
+
+  .header_inner {
+    width: map.get(variables.$header, inner-width);
+    height: map.get(variables.$header, inner-height);
+
+    margin: 0 auto;
+    position: relative;
+
+    .header__logo {
+      position: absolute;
+      @each $key, $value in map.get(variables.$header, logo-abs-pos){
+        #{$key}: $value;
+      }
+
+      padding: map.get(variables.$header, item-padding);
+      font-size: map.get(variables.$header, logo-font-size);
+      font-weight: map.get(variables.$header, logo-font-weight);
+    }
+
+    .header__utility-menu {
+      position: absolute;
+      @each $key, $value in map.get(variables.$header, utility-menu-abs-pos){
+        #{$key}: $value;
+      }
+
+      display: flex;
+      gap: map.get(variables.$header, utility-menu-gap);
+
+      a {
+        padding: map.get(variables.$header, item-padding);
+        color: map.get(variables.$header, utility-menu-color);;
+      }
+
+    }
+
+    .header__menu {
+      position: absolute;
+      @each $key, $value in map.get(variables.$header, menu-abs-pos){
+        #{$key}: $value;
+      }
+
+      display: flex;
+      gap: map.get(variables.$header, menu-gap);
+
+      a {
+        padding: map.get(variables.$header, item-padding);
+        color: map.get(variables.$header, menu-item-color);
+        font-weight: map.get(variables.$header, menu-font-weight);
+
+        &:hover{
+          color: map.get(variables.$header, menu-item-hover-color);
+        }
+       
+      }
+    }
+  }
+}
