@@ -19,8 +19,8 @@ header {
 }
 header .header_inner {
   width: 1180px;
-  margin: 0 auto;
   height: 120px;
+  margin: 0 auto;
   position: relative;
 }
 header .header_inner .header__logo {
@@ -38,7 +38,7 @@ header .header_inner .header__utility-menu {
   display: flex;
   gap: 20px;
 }
-header .header_inner .header__utility-menu .header__utility-item {
+header .header_inner .header__utility-menu a {
   padding: 5px 20px;
   color: gray;
 }
@@ -49,12 +49,12 @@ header .header_inner .header__menu {
   display: flex;
   gap: 20px;
 }
-header .header_inner .header__menu .header__menu-item {
+header .header_inner .header__menu a {
   padding: 5px 20px;
   color: rgb(160, 160, 160);
   font-weight: 900;
 }
-header .header_inner .header__menu .header__menu-item:hover {
+header .header_inner .header__menu a:hover {
   color: black;
 }
 
@@ -68,85 +68,4 @@ header .header_inner .header__menu .header__menu-item:hover {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.gally-list {
-  width: 100%;
-  padding-top: 130px;
-  padding-bottom: 50px;
-}
-.gally-list .grid {
-  width: 1000px;
-  margin: 0 auto;
-}
-.gally-list .grid .grid-item img {
-  display: block;
-}
-.gally-list .gally-item {
-  position: relative;
-}
-.gally-list .gally-item .gally-item__description {
-  position: absolute;
-  font-weight: 700;
-}
-.gally-list .gally-item .merry-christmas {
-  top: auto;
-  right: 10px;
-  bottom: 10px;
-  left: auto;
-  color: white;
-  font-size: 40px;
-}
-.gally-list .gally-item .frozen {
-  top: 40px;
-  right: auto;
-  bottom: auto;
-  left: 10px;
-  color: white;
-  font-size: 25px;
-}
-.gally-list .gally-item .present {
-  top: auto;
-  right: 10px;
-  bottom: 10px;
-  left: auto;
-  color: white;
-  font-size: 25px;
-}
-.gally-list .gally-item .programmer {
-  top: auto;
-  right: 10px;
-  bottom: 10px;
-  left: auto;
-  color: white;
-  font-size: 25px;
-}
-.gally-list .gally-item .be-rich {
-  top: auto;
-  right: 10px;
-  bottom: 15px;
-  left: auto;
-  color: rgb(204, 204, 0);
-  font-size: 30px;
-}
-.gally-list .gally-item .life {
-  width: 100%;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 40px;
-  text-shadow: 2px 2px 4px black;
-}
-.gally-list .gally-item .digital-nomad {
-  bottom: 60px;
-  right: 80px;
-  color: white;
-  font-size: 20px;
-  font-weight: normal;
-}
-.gally-list .gally-item .digital-nomad .digital-nomad__text-strong {
-  font-size: 30px;
-  font-weight: 700;
 }/*# sourceMappingURL=gallay.css.map */

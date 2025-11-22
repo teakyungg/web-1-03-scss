@@ -19,8 +19,8 @@ header {
 }
 header .header_inner {
   width: 1180px;
-  margin: 0 auto;
   height: 120px;
+  margin: 0 auto;
   position: relative;
 }
 header .header_inner .header__logo {
@@ -38,7 +38,7 @@ header .header_inner .header__utility-menu {
   display: flex;
   gap: 20px;
 }
-header .header_inner .header__utility-menu .header__utility-item {
+header .header_inner .header__utility-menu a {
   padding: 5px 20px;
   color: gray;
 }
@@ -49,105 +49,11 @@ header .header_inner .header__menu {
   display: flex;
   gap: 20px;
 }
-header .header_inner .header__menu .header__menu-item {
+header .header_inner .header__menu a {
   padding: 5px 20px;
   color: rgb(160, 160, 160);
   font-weight: 900;
 }
-header .header_inner .header__menu .header__menu-item:hover {
+header .header_inner .header__menu a:hover {
   color: black;
-}
-
-footer {
-  width: 100%;
-  background-color: rgb(34, 34, 34);
-  padding-bottom: 100px;
-}
-footer .footer__inner {
-  width: 1000px;
-  margin: 0 auto;
-  height: 100px;
-  position: relative;
-  color: gray;
-}
-footer .footer__inner .footer__title {
-  position: absolute;
-  bottom: 15px;
-  left: 10px;
-  font-size: 40px;
-}
-footer .footer__inner .footer__info {
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-}
-footer .footer__inner .footer__info .footer__info-list {
-  display: flex;
-}
-footer .footer__inner .footer__info .footer__info-list *::after {
-  content: "|";
-  padding: 0 10px;
-}
-footer .footer__inner .footer__info .footer__info-list *:last-child::after {
-  content: "";
-  padding: 0;
-}
-footer .footer__inner .footer__contact {
-  position: absolute;
-  top: 100px;
-}
-
-.hero-image {
-  width: 100%;
-  padding-top: 120px;
-}
-.hero-image .hero-image__inner {
-  background-image: url(../Quest/bg_main.png);
-  height: 590px;
-  position: relative;
-}
-.hero-image .hero-image__inner .hero-image__info {
-  width: 800px;
-  height: 300px;
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  color: white;
-}
-.hero-image .hero-image__inner .hero-image__info .hero-image__title {
-  font-size: 80px;
-  color: inherit;
-  font-weight: 700;
-}
-.hero-image .hero-image__inner .hero-image__info .hero-image__content {
-  color: inherit;
-  font-size: 25px;
-}
-
-.recent-news {
-  width: 100%;
-}
-.recent-news .recent-news__inner {
-  width: 1180px;
-  margin: 0 auto;
-  height: 450px;
-  position: relative;
-}
-.recent-news .recent-news__inner .recent-news__title {
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.recent-news .recent-news__inner .recent-news__list {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-.recent-news .recent-news__inner .recent-news__list .recent-news__item {
-  width: 230px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }/*# sourceMappingURL=index.css.map */
