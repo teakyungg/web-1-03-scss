@@ -56,4 +56,42 @@ header .header_inner .header__menu a {
 }
 header .header_inner .header__menu a:hover {
   color: black;
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(16, 19, 22);
+  color: rgb(54, 53, 53);
+}
+footer .footer__inner {
+  margin: 0 auto;
+  width: 1000px;
+  height: 100px;
+  padding: 40px 0;
+  position: relative;
+}
+footer .footer__inner .footer__title, footer .footer__inner .footer__info, footer .footer__inner .footer__address {
+  position: absolute;
+}
+footer .footer__inner .footer__title {
+  top: 30px;
+  left: 0;
+  font-size: 40px;
+}
+footer .footer__inner .footer__info {
+  display: flex;
+  top: 50px;
+  right: 0;
+}
+footer .footer__inner .footer__info *::after {
+  content: "|";
+  padding: 0 10px;
+}
+footer .footer__inner .footer__info *:last-child::after {
+  content: "";
+  padding: 0;
+}
+footer .footer__inner .footer__address {
+  bottom: 10px;
+  left: 0;
 }/*# sourceMappingURL=index.css.map */

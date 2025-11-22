@@ -1,0 +1,54 @@
+@use "sass:map";
+@use "./footer.vars" as vars;
+
+footer{
+    width: 100%;
+    background-color: map.get(vars.$footer, basic-background-color);
+    color: map.get(vars.$footer, basic-color); 
+   
+    .footer__inner{
+        margin: 0 auto;
+        width: map.get(vars.$footer, inner-width);
+        height: map.get(vars.$footer, inner-height);
+        padding: map.get(vars.$footer, inner-padding);
+
+        position: relative;
+
+        .footer__title, .footer__info, .footer__address{
+            position: absolute;
+        }
+
+        .footer__title{   
+            @each $key, $value in map.get(vars.$footer, title-abs-pos){
+                #{$key}: $value;
+            }
+
+            font-size: map.get(vars.$footer, title-font-size);
+        }
+
+        .footer__info{
+            display: flex;
+
+            @each $key, $value in map.get(vars.$footer, info-abs-pos){
+                #{$key}: $value;
+            }
+
+            *::after{
+                content: map.get(vars.$footer, info-after-content);  
+                padding: 0 map.get(vars.$footer, info-after-content-gap);
+                }
+
+                *:last-child::after{
+                    content: "";
+                    padding: 0;
+                }
+        }
+
+        .footer__address{
+            @each $key, $value in map.get(vars.$footer, address-abs-pos){
+                #{$key}: $value;
+            }
+        }
+        
+    }
+}
