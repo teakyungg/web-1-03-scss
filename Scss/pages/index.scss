@@ -1,4 +1,6 @@
 @forward "../common/resetCss"; // 공용
-@forward "./header"; // 공용
-@forward "./footer"; // 공용
+@forward "../components/header"; // 공용
+@forward "../components/footer"; // 공용
 
+// 이거 컴포넌트 단위로 만들기 보다는 공용빼고 그냥 여기 만들고 
+// 필요한 변수또는 mixin만 골라서 빼는게 더 효과적일듯
