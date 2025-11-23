@@ -2,6 +2,12 @@
 @use "./header.vars" as vars;
 
 header {
+
+  $inner: map.get(vars.$header, inner);
+  $logo: map.get(vars.$header, logo);
+  $utility-menu: map.get(vars.$header, utility-menu);
+  $main-menu: map.get(vars.$header, main-menu);
+
   width: 100%;
   position: fixed;
   z-index: map.get(vars.$header, z-index);
@@ -10,55 +16,55 @@ header {
   border-bottom: map.get(vars.$header, border-bottom);
 
   .header_inner {
-    width: map.get(vars.$header, inner-width);
-    height: map.get(vars.$header, inner-height);
+    width: map.get($inner, width);
+    height: map.get($inner, height);
 
     margin: 0 auto;
     position: relative;
 
     .header__logo {
       position: absolute;
-      @each $key, $value in map.get(vars.$header, logo-abs-pos){
+      @each $key, $value in map.get($logo, abs-pos){
         #{$key}: $value;
       }
 
       padding: map.get(vars.$header, item-padding);
-      font-size: map.get(vars.$header, logo-font-size);
-      font-weight: map.get(vars.$header, logo-font-weight);
+      font-size: map.get($logo, font-size);
+      font-weight: map.get($logo, font-weight);
     }
 
     .header__utility-menu {
       position: absolute;
-      @each $key, $value in map.get(vars.$header, utility-menu-abs-pos){
+      @each $key, $value in map.get($utility-menu, abs-pos){
         #{$key}: $value;
       }
 
       display: flex;
-      gap: map.get(vars.$header, utility-menu-gap);
+      gap: map.get($utility-menu, gap);
 
       a {
         padding: map.get(vars.$header, item-padding);
-        color: map.get(vars.$header, utility-menu-color);;
+        color: map.get($utility-menu, color);;
       }
 
     }
 
-    .header__menu {
+    .header__main-menu {
       position: absolute;
-      @each $key, $value in map.get(vars.$header, menu-abs-pos){
+      @each $key, $value in map.get($main-menu, abs-pos){
         #{$key}: $value;
       }
 
       display: flex;
-      gap: map.get(vars.$header, menu-gap);
+      gap: map.get($main-menu, gap);
 
       a {
         padding: map.get(vars.$header, item-padding);
-        color: map.get(vars.$header, menu-item-color);
-        font-weight: map.get(vars.$header, menu-font-weight);
+        color: map.get($main-menu, item-color);
+        font-weight: map.get($main-menu, font-weight);
 
         &:hover{
-          color: map.get(vars.$header, menu-item-hover-color);
+          color: map.get($main-menu, item-hover-color);
         }
        
       }
