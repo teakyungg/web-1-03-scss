@@ -1,0 +1,19 @@
+$hero-image : (
+    height: 590px,
+    background-image: url(../../Quest/bg_main.png),
+
+    inner: (
+        width: 1000px,
+        content-gap: 20px
+    ),
+
+    title: (
+        color: white,
+        font-size: 80px
+    ),
+
+    description: (
+        color: white,
+        font-size: 25px
+    ),
+)

@@ -2,5 +2,44 @@
 @forward "../components/header"; // 공용
 @forward "../components/footer"; // 공용
 
-// 이거 컴포넌트 단위로 만들기 보다는 공용빼고 그냥 여기 만들고 
-// 필요한 변수또는 mixin만 골라서 빼는게 더 효과적일듯
+@use "sass:map";
+@use "./index.vars" as vars;
+
+
+.hero-image{
+    // 각각에 해당하는 map만 가져옮
+    $inner: map.get(vars.$hero-image, inner);  
+    $title: map.get(vars.$hero-image, title);
+    $description: map.get(vars.$hero-image, description);
+
+    padding-top: 120px;
+
+    width: 100%;
+    height: map.get(vars.$hero-image, height);
+
+    display: flex;
+    background-image: map.get(vars.$hero-image, background-image);   
+
+    .hero-image__inner{
+        margin: auto;
+        width: map.get($inner, width);
+        min-width: map.get($inner, width);
+        
+        display: flex;
+        flex-direction: column;
+        gap: map.get($inner, content-gap);
+
+        .hero-image__title{
+            color: map.get($title, color);
+            font-size: map.get($title, font-size);
+        }
+
+        .hero-image__description{
+            color: map.get($description, color);
+            font-size: map.get($description, font-size);
+        }
+    }
+    
+}
+
+
