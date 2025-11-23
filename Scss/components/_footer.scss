@@ -2,15 +2,20 @@
 @use "./footer.vars" as vars;
 
 footer{
+    $inner: map.get(vars.$footer, inner);
+    $title: map.get(vars.$footer, title);
+    $info: map.get(vars.$footer, info);
+    $address: map.get(vars.$footer, address);
+
     width: 100%;
-    background-color: map.get(vars.$footer, basic-background-color);
-    color: map.get(vars.$footer, basic-color); 
+    background-color: map.get(vars.$footer, background-color);
+    color: map.get(vars.$footer, color); 
    
     .footer__inner{
         margin: 0 auto;
-        width: map.get(vars.$footer, inner-width);
-        height: map.get(vars.$footer, inner-height);
-        padding: map.get(vars.$footer, inner-padding);
+        width: map.get($inner, width);
+        height: map.get($inner, height);
+        padding: map.get($inner, padding);
 
         position: relative;
 
@@ -19,23 +24,23 @@ footer{
         }
 
         .footer__title{   
-            @each $key, $value in map.get(vars.$footer, title-abs-pos){
+            @each $key, $value in map.get($title, abs-pos){
                 #{$key}: $value;
             }
 
-            font-size: map.get(vars.$footer, title-font-size);
+            font-size: map.get($title, font-size);
         }
 
         .footer__info{
             display: flex;
 
-            @each $key, $value in map.get(vars.$footer, info-abs-pos){
+            @each $key, $value in map.get($info, abs-pos){
                 #{$key}: $value;
             }
 
             *::after{
-                content: map.get(vars.$footer, info-after-content);  
-                padding: 0 map.get(vars.$footer, info-after-content-gap);
+                content: map.get($info, after-content);  
+                padding: 0 map.get($info, after-content-gap);
                 }
 
                 *:last-child::after{
@@ -45,7 +50,7 @@ footer{
         }
 
         .footer__address{
-            @each $key, $value in map.get(vars.$footer, address-abs-pos){
+            @each $key, $value in map.get($address, abs-pos){
                 #{$key}: $value;
             }
         }
