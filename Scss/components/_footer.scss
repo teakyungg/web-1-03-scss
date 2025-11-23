@@ -40,7 +40,7 @@ footer{
 
             *::after{
                 content: map.get($info, after-content);  
-                padding: 0 map.get($info, after-content-gap);
+                padding: 0 map.get($info, after-content-row-gap);
                 }
 
                 *:last-child::after{

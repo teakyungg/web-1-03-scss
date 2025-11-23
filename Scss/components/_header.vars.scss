@@ -21,14 +21,14 @@ $header : (
     // 유틸리티 메뉴
     utility-menu: (
         abs-pos: (top: 10px, right:20px),
-        gap : 20px,
+        row-gap : 20px,
         color: gray,
     ),
 
     // 메인 메뉴
     main-menu: (
         abs-pos: (right: 0, bottom: 20px),
-        gap: 20px,
+        row-gap: 20px,
         item-color : rgb(160, 160, 160),
         item-hover-color : black,
         font-weight: 900,
