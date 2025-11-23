@@ -1,4 +1,4 @@
-$hero-image : (
+$hero-image: (
     height: 590px,
     background-image: url(../../Quest/bg_main.png),
 
@@ -16,4 +16,23 @@ $hero-image : (
         color: white,
         font-size: 25px
     ),
-)
+);
+
+$recent-news: (
+    inner: (
+        width: 1180px,
+        height: 450px,
+        col-gap: 40px
+    ),
+
+    title: (
+        font-size: 20px
+    ),
+
+    item: (
+        width: 230px,
+        row-gap: 40px,
+        title-padding: 8px 0,
+    )
+    
+);

@@ -8,7 +8,6 @@
 
 
 .hero-image{
-    // 각각에 해당하는 map만 가져옮
     $inner: map.get(vars.$hero-image, inner);  
     $title: map.get(vars.$hero-image, title);
     $description: map.get(vars.$hero-image, description);
@@ -44,4 +43,42 @@
     
 }
 
+.recent-news{
+    $inner: map.get(vars.$recent-news, inner);  
+    $title: map.get(vars.$recent-news, title); 
+    $item: map.get(vars.$recent-news, item); 
 
+    width: 100%;
+
+    .recent-news__inner{
+        width:  map.get($inner, width);  
+        height: map.get($inner, height);  
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        gap: map.get($inner, col-gap);
+        justify-content: center;
+        align-items: center;
+
+        .recent-news__title{
+            font-size: map.get($title, font-size);  
+        }
+
+        .recent-news__item{
+            display: flex;
+            gap: map.get($item, row-gap);
+            
+            figure{
+                width: map.get($item, width);
+
+                .recent-news__item-title{
+                    padding: map.get($item, title-padding);
+                }
+
+            }
+            
+        }
+        
+    }
+}
