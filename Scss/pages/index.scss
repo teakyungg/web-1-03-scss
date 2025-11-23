@@ -4,6 +4,7 @@
 
 @use "sass:map";
 @use "./index.vars" as vars;
+@use "../components/header.vars" as header-vars;
 
 
 .hero-image{
@@ -11,8 +12,9 @@
     $inner: map.get(vars.$hero-image, inner);  
     $title: map.get(vars.$hero-image, title);
     $description: map.get(vars.$hero-image, description);
+    $header-inner: map.get(header-vars.$header, inner);
 
-    padding-top: 120px;
+    padding-top: map.get($header-inner, height);
 
     width: 100%;
     height: map.get(vars.$hero-image, height);

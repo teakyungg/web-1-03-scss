@@ -2,7 +2,6 @@
 @use "./header.vars" as vars;
 
 header {
-
   $inner: map.get(vars.$header, inner);
   $logo: map.get(vars.$header, logo);
   $utility-menu: map.get(vars.$header, utility-menu);
