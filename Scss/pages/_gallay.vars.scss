@@ -1,0 +1,39 @@
+$gallery: (
+    width: 1000px,
+    default-font-weight: 700,
+    default-font-color: white,
+    
+    merry-christmas: (
+        abs-pos: (right: 20px,  bottom: 20px,),
+        font-size: 30px,
+    ),
+
+    frozen: (
+        abs-pos: (left: 10px, top: 40px),
+        font-size: 20px
+    ),
+
+    present: (
+        abs-pos: (right: 20px, bottom: 20px),
+        font-size: 20px,
+    ),
+
+    be-rich: (
+        abs-pos: (right: 20px, bottom: 20px),
+        font-size: 30px,
+        color: rgb(219, 219, 43)
+    ),
+
+    life: (
+        font-size: 40px,
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
+    ),
+
+    digital-nomad: (
+        abs-pos: (right: 100px, bottom: 60px),
+        font-size: 20px,
+        font-weight: normal,
+        line-height: 40px,
+        strong-font-size: 30px
+    )
+);
