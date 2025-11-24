@@ -5,7 +5,7 @@
 @use "../utils/layout";
 
 @use "../components/header.vars" as header;
-@use "./gallay.vars" as gallery;
+@use "./gallery.vars" as gallery;
 
 *{
     font-family: layout.$font-base;
