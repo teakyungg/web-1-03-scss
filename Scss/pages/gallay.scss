@@ -2,11 +2,17 @@
 @forward "../common/resetCss"; // 공용
 @forward "../common/sr-only"; // 공용
 @forward "../components/header";
+@use "../utils/layout";
 
 @use "../components/header.vars" as header;
 @use "./gallay.vars" as gallery;
 
+*{
+    font-family: layout.$font-base;
+}
+
 .gallery{
+    // header의 높이 값을 가져옮
     $header-inner: map.get(header.$header, inner);
     padding-top: (map.get($header-inner, height) + 10px);
 
@@ -78,7 +84,7 @@
             }
 
             font-size: map.get($digital-nomad, font-size);
-            font-weight: map.get($digital-nomad, normal);
+            font-weight: map.get($digital-nomad, font-weight);
             line-height: map.get($digital-nomad, line-height);
 
             strong{

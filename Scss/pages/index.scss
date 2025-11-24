@@ -1,11 +1,15 @@
 @forward "../common/resetCss"; // 공용
 @forward "../components/header"; // 공용
 @forward "../components/footer"; // 공용
+@use "../utils/layout";
 
 @use "sass:map";
 @use "./index.vars" as vars;
 @use "../components/header.vars" as header-vars;
 
+*{
+    font-family: layout.$font-base;
+}
 
 .hero-image{
     $inner: map.get(vars.$hero-image, inner);  

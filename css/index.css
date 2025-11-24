@@ -2,7 +2,6 @@
   padding: 0px;
   margin: 0px;
   list-style: none;
-  font-family: "verdana", Courier, monospace;
 }
 
 a {
@@ -42,19 +41,19 @@ header .header_inner .header__utility-menu a {
   padding: 5px 20px;
   color: gray;
 }
-header .header_inner .header__menu {
+header .header_inner .header__main-menu {
   position: absolute;
   right: 0;
   bottom: 20px;
   display: flex;
   gap: 20px;
 }
-header .header_inner .header__menu a {
+header .header_inner .header__main-menu a {
   padding: 5px 20px;
   color: rgb(160, 160, 160);
   font-weight: 900;
 }
-header .header_inner .header__menu a:hover {
+header .header_inner .header__main-menu a:hover {
   color: black;
 }
 
@@ -94,4 +93,59 @@ footer .footer__inner .footer__info *:last-child::after {
 footer .footer__inner .footer__address {
   bottom: 10px;
   left: 0;
+}
+
+* {
+  font-family: "verdana", Courier, monospace;
+}
+
+.hero-image {
+  padding-top: 120px;
+  width: 100%;
+  height: 590px;
+  display: flex;
+  background-image: url(../../Quest/bg_main.png);
+}
+.hero-image .hero-image__inner {
+  margin: auto;
+  width: 1000px;
+  min-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-image .hero-image__inner .hero-image__title {
+  color: white;
+  font-size: 80px;
+}
+.hero-image .hero-image__inner .hero-image__description {
+  color: white;
+  font-size: 25px;
+}
+
+.recent-news {
+  width: 100%;
+}
+.recent-news .recent-news__inner {
+  width: 1180px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.recent-news .recent-news__inner .recent-news__title {
+  font-size: 20px;
+}
+.recent-news .recent-news__inner .recent-news__item {
+  display: flex;
+  gap: 40px;
+}
+.recent-news .recent-news__inner .recent-news__item figure {
+  width: 230px;
+}
+.recent-news .recent-news__inner .recent-news__item figure .recent-news__item-title {
+  padding: 8px 0;
 }/*# sourceMappingURL=index.css.map */
