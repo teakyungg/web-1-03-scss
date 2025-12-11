@@ -1,5 +1,5 @@
 @use "./resetCss";
-@use "./_variables" as vars;
+@use "./variables" as vars;
 @use "./mixin" as mixin;
 
 * {
@@ -8,8 +8,44 @@
 }
 
 header {
+  border-bottom: 1px solid map-get(vars.$color, black);
+
+  a{
+    padding: 5px 20px;
+  }
+
   // 공용 inner
   @include mixin.inner(1180px, 120px) {
-    background-color: lightgreen;
+    position: relative;
+  }
+
+  .header__logo {
+    @include mixin.abs-pos((bottom: 10px, left: 100px));  
+    font-size: map-get(vars.$font-size, xl);
+    font-weight: map-get(vars.$font-weight, bold);
+  }
+
+  .header__utility-menu {
+    @include mixin.abs-pos((right: 20px, top: 10px));
+    color: map-get(vars.$color, light-gray);
+
+    display: flex;
+    gap: 20px;
+  }
+
+  .header__main-menu {
+    @include mixin.abs-pos((bottom: 20px, right: 0));
+    color: map-get(vars.$color, light-gray);
+    font-weight: map-get(vars.$font-weight, bold);
+    text-align: center;
+    
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+
+    a:hover{
+      color: map-get(vars.$color, black);
+    }
   }
 }
