@@ -1,5 +1,6 @@
 @use "./resetCss";
 @use "./_variables" as vars;
+@use "./mixin" as mixin;
 
 * {
   // 전역 기본 폰트
@@ -7,11 +8,8 @@
 }
 
 header {
-  .inner {
-    width: 1180px;
-    height: 120px;
-    margin: 0 auto;
-
-    background-color: aqua;
+  // 공용 inner
+  @include mixin.inner(1180px, 120px) {
+    background-color: lightgreen;
   }
 }
