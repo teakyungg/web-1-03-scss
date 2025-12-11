@@ -10,7 +10,7 @@ $font-size: (
     sm: 8px,
     md: 16px,
     lg: 24px,
-    xl: 32px,
+    xl: 30px,
 );
 
 // font-weight
@@ -19,5 +19,11 @@ $font-weight: (
     regular: 400,
     medium: 500,
     bold: 700,
-)
+);
 
+// color
+$color: (
+    black: rgb(0, 0, 0),
+    light-gray: rgb(128, 128, 128),
+    dark-gray: rgb(54, 53, 53),
+)
