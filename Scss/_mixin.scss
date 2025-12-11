@@ -21,3 +21,32 @@
     #{$dir}: $value;
   }
 }
+
+// flex 
+@mixin col-flex($gap: null, $center: false){
+    display: flex;
+    flex-direction: column;
+
+    @if $gap != null {
+        gap: $gap;
+    }
+
+    @if $center == true {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin row-flex($gap: null, $center: false){
+    display: flex;
+
+    @if $gap != null {
+        gap: $gap;
+    }
+
+    @if $center == true {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
