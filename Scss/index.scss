@@ -98,8 +98,8 @@ footer{
   }
 
   .footer__info{
-    //@include mixin.row-flex();
     @include mixin.abs-pos((right: 0px, top: 50px));
+    display: flex;
 
     li::after{
       content: "|";
