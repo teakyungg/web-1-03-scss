@@ -1,0 +1,13 @@
+@mixin inner($w, $h: null) {
+  .inner {
+    width: $w;
+
+    @if $h != null {
+      height: $h;
+    }
+
+    margin: 0 auto;
+    // .inner 내부에 추가 스타일을 주입할 때 사용
+    @content;
+  }
+}
