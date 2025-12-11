@@ -47,7 +47,6 @@ header {
 }
 
 .hero-image{
-
   @include mixin.col-flex(20px, true);
   height: 590px;
   color: map-get(vars.$color, white);
@@ -65,4 +64,52 @@ header {
   .hero-image__description{
     font-size: map-get(vars.$font-size, lg);
   }
+}
+
+.recent-news{
+  @include mixin.inner(1180px, 450px){
+    @include mixin.col-flex(40px, true);
+  };
+
+  .recent-news__item{
+    @include mixin.row-flex(40px);
+  }
+
+  figure{
+    @include mixin.col-flex(10px);
+  }
+}
+
+footer{
+  background-color: map-get(vars.$color, light-black);
+  color: map-get(vars.$color, light-gray);
+
+  @include mixin.inner(1000px, 180px){
+    position: relative;
+  }
+
+  .footer__title{
+    @include mixin.abs-pos((left: 0, top:30px));
+    font-size: map-get(vars.$font-size, xl);
+  }
+
+  .footer__info{
+    @include mixin.row-flex();
+    @include mixin.abs-pos((right: 0px, top: 50px));
+
+    li::after{
+      content: "|";
+      padding: 0 10px;
+    };
+
+    li:last-child::after{
+      content: "";
+      padding: 0;
+    }
+  }
+
+  .footer__address{
+    @include mixin.abs-pos((bottom: 10px));
+  }
+
 }
