@@ -37,15 +37,32 @@ header {
     @include mixin.abs-pos((bottom: 20px, right: 0));
     color: map-get(vars.$color, light-gray);
     font-weight: map-get(vars.$font-weight, bold);
-    text-align: center;
     
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    align-items: center;
+    @include mixin.row-flex(25px, true);
 
     a:hover{
       color: map-get(vars.$color, black);
     }
+  }
+}
+
+.hero-image{
+
+  @include mixin.col-flex(20px, true);
+  height: 590px;
+  color: map-get(vars.$color, white);
+
+  background-image: url('../img/bg_main.png');
+
+  *{
+    width: 1000px;
+  }
+
+  .hero-image__title{
+    font-size: map-get(vars.$font-size, xxl);
+  }
+
+  .hero-image__description{
+    font-size: map-get(vars.$font-size, lg);
   }
 }
