@@ -1,0 +1,17 @@
+@use "./resetCss";
+@use "./_variables" as vars;
+
+* {
+  // 전역 기본 폰트
+  font-family: vars.$font-family-basic;
+}
+
+header {
+  .inner {
+    width: 1180px;
+    height: 120px;
+    margin: 0 auto;
+
+    background-color: aqua;
+  }
+}
