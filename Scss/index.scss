@@ -37,8 +37,9 @@ header {
     @include mixin.abs-pos((bottom: 20px, right: 0));
     color: map-get(vars.$color, light-gray);
     font-weight: map-get(vars.$font-weight, bold);
-    
-    @include mixin.row-flex(25px, true);
+  
+    display: flex;
+    gap: 25px;
 
     a:hover{
       color: map-get(vars.$color, black);
@@ -47,13 +48,13 @@ header {
 }
 
 .hero-image{
-  @include mixin.col-flex(20px, true);
+  @include mixin.flex-center(column, 20px);
   height: 590px;
   color: map-get(vars.$color, white);
 
   background-image: url('../img/bg_main.png');
 
-  *{
+  & > *{
     width: 1000px;
   }
 
@@ -68,15 +69,18 @@ header {
 
 .recent-news{
   @include mixin.inner(1180px, 450px){
-    @include mixin.col-flex(40px, true);
+    @include mixin.flex-center(column, 40px);
   };
 
   .recent-news__item{
-    @include mixin.row-flex(40px);
+   display: flex;
+   gap: 40px;
   }
 
   figure{
-    @include mixin.col-flex(10px);
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
   }
 }
 
@@ -94,7 +98,7 @@ footer{
   }
 
   .footer__info{
-    @include mixin.row-flex();
+    //@include mixin.row-flex();
     @include mixin.abs-pos((right: 0px, top: 50px));
 
     li::after{
