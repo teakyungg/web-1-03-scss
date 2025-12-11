@@ -1,3 +1,4 @@
+// inner
 @mixin inner($w, $h: null) {
   .inner {
     width: $w;
@@ -9,5 +10,14 @@
     margin: 0 auto;
     // .inner 내부에 추가 스타일을 주입할 때 사용
     @content;
+  }
+}
+
+// absolute position 세팅
+@mixin abs-pos($positions) {
+  position: absolute;
+
+  @each $dir, $value in $positions {
+    #{$dir}: $value;
   }
 }
