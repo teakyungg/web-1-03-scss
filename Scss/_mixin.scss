@@ -23,30 +23,17 @@
 }
 
 // flex 
-@mixin col-flex($gap: null, $center: false){
+@mixin flex-center($dir: row, $gap: null){
     display: flex;
-    flex-direction: column;
+    flex-direction: $dir;
+
+    justify-content: center;
+    align-items: center;
 
     @if $gap != null {
         gap: $gap;
-    }
-
-    @if $center == true {
-        justify-content: center;
-        align-items: center;
-    }
+    }    
 }
 
-@mixin row-flex($gap: null, $center: false){
-    display: flex;
 
-    @if $gap != null {
-        gap: $gap;
-    }
-
-    @if $center == true {
-        justify-content: center;
-        align-items: center;
-    }
-}
 
