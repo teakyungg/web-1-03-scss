@@ -1,0 +1,152 @@
+@use "./resetCss";
+@use "./variables" as vars;
+@use "./mixin" as mixin;
+
+* {
+  // 전역 기본 폰트
+  font-family: vars.$font-family-basic;
+}
+
+header {
+  border-bottom: 1px solid map-get(vars.$color, black);
+  position: fixed;
+  width: 100%;
+  background-color: map-get(vars.$color, white);
+  z-index: 1;
+
+  a{
+    padding: 5px 20px;
+  }
+
+  // 공용 inner
+  @include mixin.inner(1180px, vars.$header-height) {
+    position: relative;
+  }
+
+  .header__logo {
+    @include mixin.abs-pos((bottom: 10px, left: 100px));  
+    font-size: map-get(vars.$font-size, xl);
+    font-weight: map-get(vars.$font-weight, bold);
+  }
+
+  .header__utility-menu {
+    @include mixin.abs-pos((right: 20px, top: 10px));
+    color: map-get(vars.$color, light-gray);
+
+    display: flex;
+    gap: 20px;
+  }
+
+  .header__main-menu {
+    @include mixin.abs-pos((bottom: 20px, right: 0));
+    color: map-get(vars.$color, light-gray);
+    font-weight: map-get(vars.$font-weight, bold);
+  
+    display: flex;
+    gap: 25px;
+
+    a:hover{
+      color: map-get(vars.$color, black);
+    }
+  }
+}
+
+.gallery{
+  width: 1000px;
+  padding-top: vars.$header-height + 10px;
+  margin: 0 auto;
+
+  // 글자 강조
+  strong{
+    font-size: map-get(vars.$font-size, lg) + 10px;
+  }
+
+  figure{
+    position: relative;
+
+    // figure의 각각의 데이터
+    $data: (
+      merry-christmas:(
+        // 조건문이 필요한 요소만 따로 분리
+        pos: (bottom: 20px, right: 20px),
+        
+        // 나머지 모두 넣을 속성
+        option: (
+          font-size: map-get(vars.$font-size, xl),
+          font-weight: map-get(vars.$font-weight, bold),
+          color: map-get(vars.$color, white),
+        )
+      ),
+
+      frozen:(
+        pos: (top: 40px, left: 10px),
+        
+        option: (
+          font-size: map-get(vars.$font-size, lg),
+          font-weight: map-get(vars.$font-weight, bold),
+          color: map-get(vars.$color, white),
+        )
+      ),
+
+      present:(
+        pos: (bottom: 20px, right: 10px),
+        
+        option: (
+          font-size: map-get(vars.$font-size, md),
+          font-weight: map-get(vars.$font-weight, bold),
+          color: map-get(vars.$color, white),
+        )
+      ),
+
+      be-rich:(
+        pos: (bottom: 20px, right: 20px),
+        
+        option: (
+          font-size: map-get(vars.$font-size, xl),
+          font-weight: map-get(vars.$font-weight, bold),
+          color: map-get(vars.$color, dark-yellow),
+        )
+      ),
+
+      life:(
+        pos: (top:50%, left:50%),
+        
+        option: (
+          width: 100%,
+          text-align: center,
+          font-size: map-get(vars.$font-size, xl) + 10px,
+          font-weight: map-get(vars.$font-weight, bold),
+          color: map-get(vars.$color, white),
+          transform: translate(-50%,-50%),
+          text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 5px,
+        )
+      ),
+
+      digital:(
+        pos: (bottom:60px, right:100px),
+        
+        option: (
+          font-size: map-get(vars.$font-size, md),
+          color: map-get(vars.$color, white),
+          line-height: 1.5,
+        )
+      ),
+    );
+
+
+    @each $key, $value in $data{
+      .#{$key}{
+        // abs-pos만 세팅
+        @if map-get($value,pos) != null {@include mixin.abs-pos(map-get($value, pos));}
+
+        // 나머지 속성세팅
+        @if map-get($value,option) != null {
+          @each $op_key, $op_value in map-get($value,option){
+            #{$op_key}: $op_value;
+          }
+        }
+      }
+    }
+
+  }
+}
