@@ -1,1 +1,123 @@
-/*# sourceMappingURL=gallery.css.map */
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  font-family: "verdana", "Courier", "monospace";
+}
+
+header {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+}
+header a {
+  padding: 5px 20px;
+}
+header .inner {
+  width: 1180px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+header .header__logo {
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+  font-size: 30px;
+  font-weight: 700;
+}
+header .header__utility-menu {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: rgb(128, 128, 128);
+  display: flex;
+  gap: 20px;
+}
+header .header__main-menu {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  color: rgb(128, 128, 128);
+  font-weight: 700;
+  display: flex;
+  gap: 25px;
+}
+header .header__main-menu a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.gallery {
+  width: 1000px;
+  padding-top: 130px;
+  margin: 0 auto;
+}
+.gallery strong {
+  font-size: 34px;
+}
+.gallery figure {
+  position: relative;
+}
+.gallery figure .merry-christmas {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.gallery figure .frozen {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.gallery figure .present {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.gallery figure .be-rich {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(219, 219, 43);
+}
+.gallery figure .life {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  text-shadow: rgba(0, 0, 0, 0.7) 2px 2px 5px;
+}
+.gallery figure .digital {
+  position: absolute;
+  bottom: 60px;
+  right: 100px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+}/*# sourceMappingURL=gallery.css.map */
