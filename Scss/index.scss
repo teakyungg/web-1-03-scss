@@ -9,13 +9,16 @@
 
 header {
   border-bottom: 1px solid map-get(vars.$color, black);
+  position: fixed;
+  width: 100%;
+  background-color: map-get(vars.$color, white);
 
   a{
     padding: 5px 20px;
   }
 
   // 공용 inner
-  @include mixin.inner(1180px, 120px) {
+  @include mixin.inner(1180px, vars.$header-height) {
     position: relative;
   }
 
@@ -51,6 +54,7 @@ header {
   @include mixin.flex-center(column, 20px);
   height: 590px;
   color: map-get(vars.$color, white);
+  padding-top: vars.$header-height;
 
   background-image: url('../img/bg_main.png');
 
